@@ -1,6 +1,7 @@
+import imgSrc from '../assets/images/img1.webp'
 import '../styles/styles.css'
 export default function Section1() {
-    const imgSrc = '/public/images/img1.webp'
+
     return (
         <div className='container'>
             <img src={imgSrc} className='img1' />

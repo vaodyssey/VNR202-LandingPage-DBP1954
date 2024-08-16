@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import imgSrc from '../assets/images/img2.jpg';
 import Description from '../components/description';
 import TimelineSwiper from '../components/timelineSwiper';
 import { TimelineContent, TimelineContents } from '../content/timeline';
 import '../styles/styles.css';
 
 export default function Section2() {
-    const imgSrc = '/images/img2.jpg'
+
     const [currentTimeline, setCurrentTimeline] = useState<TimelineContent>(TimelineContents[0]);
     const handleTimelineChange = (timeline: TimelineContent) => {
         setCurrentTimeline(timeline)
