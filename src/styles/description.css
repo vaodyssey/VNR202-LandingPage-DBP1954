@@ -15,7 +15,7 @@
 }
 
 #description-title {
-    font-family: 'BigShouldersStencilBold';
+    font-family: 'Vintage';
     position: absolute;
     text-align: left;
     color: black;
@@ -27,6 +27,7 @@
 }
 
 #description-content {
+    font-family: 'UTMSwiss';
     position: absolute;
     text-align: left;
     color: black;

@@ -1,17 +1,28 @@
-import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardMedia } from '@mui/material';
 import { LogisticsContent, LogisticsContents } from '../content/logistics';
 import '../styles/logisticscardsection.css';
-export default function LogisticsCardSection() {
 
+export default function LogisticsCardSection() {
+    let count = 0;
     return (
         <div id='logistics-card-container' >
-            <Grid container spacing={0}>
-                {LogisticsContents.map((content) => {
+            {LogisticsContents.map((content) => {
+                count += 1
+                if (count % 2 != 0) {
                     return (
-                        <LogisticsCard logisticsContent={content} />
+                        <div id='logistics-card'>
+                            <LogisticsCard1 logisticsContent={content} count={count} />
+                        </div>
                     )
-                })}
-            </Grid>
+                } else {
+                    return (
+                        <div id='logistics-card'>
+                            <LogisticsCard2 logisticsContent={content} count={count} />
+                        </div>
+                    )
+                }
+            })}
+
 
 
         </div>
@@ -21,20 +32,43 @@ export default function LogisticsCardSection() {
 
 type LogisticsCardProps = {
     logisticsContent: LogisticsContent
+    count: number
 }
-function LogisticsCard({ logisticsContent }: LogisticsCardProps) {
+function LogisticsCard1({ logisticsContent, count }: LogisticsCardProps) {
     return (
-        <Card sx={{ maxWidth: 345, margin: 1.1, backgroundColor: 'transparent' }}>
+        <Card sx={{ display: 'flex' }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                <CardContent sx={{ flex: '1 0 auto', alignItems: 'center', padding: '8%' }}>
+                    <div id='logistics-card-description-count'>{count}.</div>
+                    <div id='logistics-card-description-1'>
+                        {logisticsContent.content}
+                    </div>
+                </CardContent>
+            </Box>
             <CardMedia
-                sx={{ height: 140 }}
+                component="img"
+                sx={{ width: '50%' }}
                 image={logisticsContent.image}
-                title="green iguana"
             />
-            <CardContent sx={{ padding: 0 }}>
-                <Typography variant="body2" color="white"
-                    sx={{ textAlign: 'left', fontSize: 17, marginTop: '5%', fontFamily: 'inter' }}>
-                    {logisticsContent.content}
-                </Typography>
-            </CardContent>
+        </Card>
+    )
+}
+function LogisticsCard2({ logisticsContent, count }: LogisticsCardProps) {
+    return (
+        <Card sx={{ display: 'flex' }}>
+            <CardMedia
+                component="img"
+                sx={{ width: '50%' }}
+                image={logisticsContent.image}
+            />
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                <CardContent sx={{ flex: '1 0 auto', alignItems: 'center', padding: '8%' }}>
+                    <div id='logistics-card-description-count'>{count}.</div>
+                    <div id='logistics-card-description-1'>
+                        {logisticsContent.content}
+                    </div>
+                </CardContent>
+            </Box>
+
         </Card>)
 }

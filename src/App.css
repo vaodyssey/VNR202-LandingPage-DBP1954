@@ -43,16 +43,25 @@
   color: #888;
 }
 
+
 @font-face {
-  font-family: 'BigShouldersStencilBold';
-  src: local('BigShouldersStencil'), url(./assets/fonts/BigShouldersStencilText-Bold.ttf) format('truetype');
+  font-family: 'Stencil';
+  src: url(./assets/fonts/Stencil.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Vintage';
+  src: url(./assets/fonts/Vintage.otf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'BigShouldersStencilRegular';
-  src: local('BigShouldersStencil'), url(./assets/fonts/BigShouldersStencilText-Regular.ttf) format('truetype');
+  font-family: 'UTMSwiss';
+  src: url(./assets/fonts/UTMSwiss.ttf) format(truetype);
   font-weight: normal;
   font-style: normal;
 }
