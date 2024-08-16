@@ -1,0 +1,49 @@
+#timeline-swiper-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    height: 20%;
+    width: 90%;
+    margin: 0 auto;
+    clip-path: polygon(9% 0, 100% 0, 91% 100%, 0% 100%);
+}
+
+
+#timeline-swiper {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 10px;
+    bottom: 0;
+    margin: auto;
+
+}
+
+#timeline-swiper-element {
+    clip-path: polygon(25% 0, 100% 0, 75% 100%, 0% 100%);
+    cursor: default
+}
+
+#timeline-swiper-element-background {
+    background-position: 'center';
+    filter: brightness(55%);
+    background-size: 'cover';
+    background-repeat: 'no-repeat';
+    width: 100%;
+    background-position: center;
+}
+
+#timeline-swiper-element-date {
+    position: absolute;
+    font-family: 'BigShouldersStencilBold';
+    justify-content: center;
+    font-size: 50px;
+    height: 40%;
+    color: white;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}

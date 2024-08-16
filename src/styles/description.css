@@ -1,0 +1,42 @@
+#description-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 90%;
+    height: 40%;
+    margin: 0 auto;
+
+    background-color: white;
+}
+
+.description-padding {
+    padding: 10px;
+}
+
+#description-title {
+    font-family: 'BigShouldersStencilBold';
+    position: absolute;
+    text-align: left;
+    color: black;
+    right: 10%;
+    left: 10%;
+    top: 10%;
+    margin: 0 auto;
+    font-size: 60px;
+}
+
+#description-content {
+    position: absolute;
+    text-align: left;
+    color: black;
+    right: 10%;
+    left: 10%;
+    top: 35%;
+    bottom: 0;
+    margin: 0 auto;
+    height: 50%;
+    font-size: 25px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

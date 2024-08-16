@@ -1,0 +1,88 @@
+.appBar {
+    background-color: '#343A40'
+}
+
+.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.img1 {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 100%;
+    display: block;
+    filter: brightness(35%)
+}
+
+.img2 {
+    height: 1200px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 25%;
+    display: block;
+    /* filter: brightness(35%) */
+}
+
+
+
+.headline-1 {
+    font-family: 'BigShouldersStencilBold';
+    font-size: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 75%;
+    width: auto;
+    text-transform: uppercase
+        /* color: white; */
+}
+
+.headline-2 {
+    font-family: 'BigShouldersStencilBold';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90px;
+    margin: auto;
+}
+
+.sub-text {
+    color: white;
+
+    font-size: 50px
+}
+
+.main-text-1 {
+    color: white;
+    font-size: 100px
+}
+
+.main-text-2 {
+    color: '#343A40';
+    text-transform: uppercase;
+    font-size: 100px
+}
+
+.description-1 {
+    font-family: 'BigShouldersStencilRegular';
+    position: absolute;
+    width: 800px;
+    color: white;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 0%;
+    font-size: 25px;
+}
+

@@ -1,0 +1,1 @@
+export const DARK_BLACK = '#343A40'
