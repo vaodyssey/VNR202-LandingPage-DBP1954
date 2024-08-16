@@ -1,8 +1,7 @@
-import AdbIcon from '@mui/icons-material/Adb';
+import BookIcon from '@mui/icons-material/Book';
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Box, Container, IconButton, Menu, Toolbar, Typography } from "@mui/material";
 import { useState } from 'react';
-// import { DARK_BROWN } from '../../constants/colors';
 import { DARK_BLACK } from '../constants/colors';
 
 export default function AppBarSection() {
@@ -15,10 +14,10 @@ export default function AppBarSection() {
         setAnchorElNav(null);
     };
     return (
-        <AppBar position="absolute" sx={{ bgcolor: DARK_BLACK }}>
+        <AppBar position="sticky" sx={{ bgcolor: DARK_BLACK }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <BookIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -27,7 +26,7 @@ export default function AppBarSection() {
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
+                            fontFamily: 'Vintage',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
                             color: 'inherit',

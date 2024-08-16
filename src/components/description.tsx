@@ -8,7 +8,6 @@ type DescriptionProps = {
 export default function Description({ timeline }: DescriptionProps) {
     return (
         <div id='description-container'>
-
             <div className='description-padding' id='description-title'>
                 <AccessTimeIcon sx={{ fontSize: 50, color: GOLD }} /> {timeline.date}
             </div>

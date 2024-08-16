@@ -1,0 +1,56 @@
+#advancement-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+}
+
+#advancement-swiper-container {
+    height: 100%;
+
+}
+
+#advancement-card-container {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+#advancement-card-image {
+    width: 100%;
+    border-radius: 10px;
+    height: 45rem;
+}
+
+#advancement-card-content {
+    font-family: 'UTMSwiss';
+    text-align: left;
+    font-size: 30px;
+    line-height: 5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    cursor: default;
+}
+
+#advancement-card-count {
+    font-family: 'Vintage';
+    text-align: left;
+    font-size: 50px;
+    line-height: 5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    cursor: default;
+}
