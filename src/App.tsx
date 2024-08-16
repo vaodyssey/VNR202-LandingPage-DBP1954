@@ -12,6 +12,7 @@ import './App.css';
 import AppBarSection from './sections/AppBarSection';
 import Section1 from './sections/Section1';
 import Section2 from './sections/Section2';
+import Section3 from './sections/Section3';
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
       <AppBarSection />
       <Section1 />
       <Section2 />
+      <Section3 />
     </div>
   )
 }

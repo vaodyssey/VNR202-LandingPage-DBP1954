@@ -1,0 +1,15 @@
+import LogisticsCardSection from '../components/logisticsCardSection'
+import '../styles/styles.css'
+
+export default function Section3() {
+    const imgSrc = '../../public/images/img4.jpg'
+    return (
+        <div className="container">
+            <img src={imgSrc} className='img3' />
+            <div className='headline-2'>
+                <div className='main-text-1'>Hậu cần</div>
+            </div>
+            <LogisticsCardSection />
+        </div>
+    )
+}

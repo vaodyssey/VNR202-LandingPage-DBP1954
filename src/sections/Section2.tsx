@@ -13,7 +13,7 @@ export default function Section2() {
     return (
         <div className='container'>
             <img src={imgSrc} className='img2'></img>
-            <div className='headline-2'>                
+            <div className='headline-2'>
                 <div className='main-text-2'>Chiến lược</div>
             </div>
             <TimelineSwiper handleTimelineChange={handleTimelineChange} />

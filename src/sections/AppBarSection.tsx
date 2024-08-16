@@ -4,7 +4,7 @@ import { AppBar, Box, Container, IconButton, Menu, Toolbar, Typography } from "@
 import { useState } from 'react';
 // import { DARK_BROWN } from '../../constants/colors';
 import { DARK_BLACK } from '../constants/colors';
-import '../styles/styles.css';
+
 export default function AppBarSection() {
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
@@ -12,16 +12,9 @@ export default function AppBarSection() {
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
     };
-    const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElUser(event.currentTarget);
-    };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
-    };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
     };
     return (
         <AppBar position="absolute" sx={{ bgcolor: DARK_BLACK }}>
