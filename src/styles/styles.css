@@ -37,10 +37,9 @@
     position: absolute;
     right: 0;
     left: 0;
-    top: 0;
+    top: 20%;
     bottom: 0;
     margin: auto;
-    height: 75%;
     width: auto;
     text-transform: uppercase
         /* color: white; */
@@ -79,10 +78,8 @@
     color: white;
     right: 0;
     left: 0;
-    top: 0;
+    top: 45%;
     bottom: 0;
     margin: auto;
-    height: 0%;
     font-size: 25px;
 }
-
