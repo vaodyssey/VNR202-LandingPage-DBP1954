@@ -14,7 +14,7 @@ export default function AppBarSection() {
         setAnchorElNav(null);
     };
     return (
-        <AppBar position="sticky" sx={{ bgcolor: DARK_BLACK }}>
+        <AppBar position="absolute" sx={{ bgcolor: DARK_BLACK }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <BookIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

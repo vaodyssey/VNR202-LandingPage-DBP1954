@@ -1,0 +1,13 @@
+#finalize-description {
+    font-family: 'UTMSwiss';
+    position: absolute;
+    width: 800px;
+    color: white;
+    right: 0;
+    left: 0;
+    top: 38%;
+    bottom: 0;
+    margin: auto;
+    font-size: 25px;
+    line-height: 3rem;
+}
