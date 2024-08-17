@@ -1,4 +1,6 @@
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { DARK_BLACK } from '../constants/colors';
 import { TimelineContent, TimelineContents } from "../content/timeline";
 import '../styles/timelineSwiper.css';
 type TimelineSwiperProps = {
@@ -9,8 +11,11 @@ export default function TimelineSwiper({ handleTimelineChange }: TimelineSwiperP
     return (
         <div id='timeline-swiper-container'>
             <Swiper
+                modules={[Navigation]}
                 spaceBetween={0}
                 slidesPerView={3}
+                navigation
+                color={DARK_BLACK}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
                 id='timeline-swiper'

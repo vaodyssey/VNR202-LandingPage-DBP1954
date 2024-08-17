@@ -1,4 +1,4 @@
-import { EffectFade } from 'swiper/modules'
+import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from "swiper/react"
 import { AdvancementContents } from '../content/advancements'
 import '../styles/advancementSection.css'
@@ -8,8 +8,9 @@ export default function AdvancementSection() {
     return (
         <div id='advancement-container'>
             <Swiper
-                modules={[EffectFade]} effect="fade"
+                modules={[Navigation]}
                 spaceBetween={0}
+                navigation
                 slidesPerView={1}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
