@@ -3,7 +3,7 @@ import '../styles/styles.css'
 export default function Section1() {
 
     return (
-        <div className='container'>
+        <div className='container' id='section1'>
             <img src={imgSrc} className='img1' />
             <div className='headline-1'>
                 <div className='sub-text' >Chiến dịch </div>

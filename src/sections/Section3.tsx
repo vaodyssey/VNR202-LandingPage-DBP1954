@@ -3,7 +3,7 @@ import LogisticsCardSection from '../components/logisticsCardSection'
 import '../styles/styles.css'
 export default function Section3() {
     return (
-        <div className="container">
+        <div className="container" id='section3'>
             <img src={imgSrc} className='img3' />
             <div className='headline-2'>
                 <div className='main-text-1'>Hậu cần</div>

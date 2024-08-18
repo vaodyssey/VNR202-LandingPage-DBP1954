@@ -3,7 +3,7 @@ import '../styles/finalize.css'
 import '../styles/styles.css'
 export default function Section5() {
     return (
-        <div className='container'>
+        <div className='container' id='section5'>
             <img src={img22} className='img3' />
             <div className='headline-1'>
                 <div className='main-text-1'>Tầm vóc</div>

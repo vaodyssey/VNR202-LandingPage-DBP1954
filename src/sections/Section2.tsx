@@ -12,7 +12,7 @@ export default function Section2() {
         setCurrentTimeline(timeline)
     }
     return (
-        <div className='container'>
+        <div className='container' id='section2'>
             <img src={imgSrc} className='img2'></img>
             <div className='headline-2'>
                 <div className='main-text-2'>Chiến lược</div>

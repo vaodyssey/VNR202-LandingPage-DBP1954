@@ -1,23 +1,33 @@
-import BookIcon from '@mui/icons-material/Book';
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Box, Container, IconButton, Menu, Toolbar, Typography } from "@mui/material";
+import { AppBar, Container, Drawer, IconButton, Toolbar, Typography } from "@mui/material";
+
 import { useState } from 'react';
+import { DrawerList } from '../components/drawer';
 import { DARK_BLACK } from '../constants/colors';
 
 export default function AppBarSection() {
-    const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElNav(event.currentTarget);
-    };
+    const [open, setOpen] = useState(false)
 
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+    const toggleDrawer = (value: boolean) => {
+        setOpen(value)
+    }
     return (
-        <AppBar position="absolute" sx={{ bgcolor: DARK_BLACK }}>
+        <AppBar position="sticky" sx={{ bgcolor: DARK_BLACK, zIndex: '2' }}>
             <Container maxWidth="xl">
+                <Drawer open={open} onClose={() => toggleDrawer(false)} >
+                    {DrawerList}
+                </Drawer>
                 <Toolbar disableGutters>
-                    <BookIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        sx={{ mr: 2 }}
+                        onClick={() => toggleDrawer(true)}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Typography
                         variant="h6"
                         noWrap
@@ -33,59 +43,8 @@ export default function AppBarSection() {
                             textDecoration: 'none',
                         }}
                     >
-                        VNR202 - Nhóm 6
+                        VNR202 - Chiến dịch Điện Biên Phủ
                     </Typography>
-
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: 'block', md: 'none' },
-                            }}
-                        >
-                            {/* {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))} */}
-                        </Menu>
-                    </Box>
-
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {/* {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
-                        ))} */}
-                    </Box>
-
-
                 </Toolbar>
             </Container>
         </AppBar>
