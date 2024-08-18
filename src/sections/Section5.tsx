@@ -10,7 +10,7 @@ export default function Section5() {
             </div>
             <div id='finalize-description'>
                 <p>
-                    Chiến thắng Điện Biên Phủ đã kết thúc vẻ vang cuộc kháng chiến lâu dài, gian khổ và anh dũng của nhân dân cả nước ta, chống thực dân Pháp xâm lược và sự can thiệp của đế quốc Mỹ. Đó là thắng lợi vĩ đại của nhân dân ta, mà cũng là thắng lợi chung của tất cả các dân tộc bị áp bức trên thế giới. Chiến thắng Điện Biên Phủ càng làm sáng ngời chân lý của chủ nghĩa Mác-Lênin trong thời đại ngày nay: chiến tranh xâm lược của bọn đế quốc nhất định thất bại, cách mạng giải phóng của các dân tộc nhất định thành công
+                    Chiến thắng Điện Biên Phủ kết thúc cuộc kháng chiến chống Pháp và sự can thiệp của Mỹ, đánh dấu thắng lợi vĩ đại của nhân dân Việt Nam và các dân tộc bị áp bức trên thế giới. Chiến thắng này khẳng định chân lý của chủ nghĩa Mác-Lênin: đế quốc xâm lược sẽ thất bại, cách mạng sẽ thành công.
                 </p>
             </div>
         </div>
