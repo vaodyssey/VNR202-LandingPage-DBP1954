@@ -1,7 +1,7 @@
 import img18 from '../assets/images/img18.jpg'
 import img19 from '../assets/images/img19.jpg'
+import img2 from '../assets/images/img2.jpg'
 import img20 from '../assets/images/img20.jpg'
-import img21 from '../assets/images/img21.jpg'
 import img4 from '../assets/images/img4.jpg'
 export type TimelineContent = {
     date: string,
@@ -30,7 +30,7 @@ export const TimelineContents: TimelineContent[] = [
     {
         date: '11/1953',
         content: `Quân ta tiến lên Tây Bắc và các khu vực khác, khiến quân Pháp phải phân tán lực lượng, đặc biệt là tại Điện Biên Phủ. Pháp xây dựng Điện Biên Phủ thành một cứ điểm mạnh, nhưng mục tiêu của ta là tiêu diệt lực lượng địch để giải phóng Tây Bắc và Bắc Lào.`,
-        image: img21
+        image: img2
     },
     {
         date: '6/12/1953',
