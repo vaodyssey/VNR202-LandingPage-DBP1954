@@ -1,0 +1,46 @@
+#footer-grid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+#footer-logo {
+    height: 10rem;
+    width: 10rem;
+}
+
+#footer-left-section {
+    padding-top: 1rem;
+    padding-left: 5rem;
+}
+
+#footer-left-text {
+    font-family: 'Vintage';
+    color: white;
+    font-size: 40px;
+    text-align: left;
+}
+
+#footer-left-sub-text {
+    font-family: 'Vintage';
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+#footer-right-section {
+    justify-content: right;
+    padding-top: 2rem;
+    padding-right: 5rem;
+}
+
+.footer-right-sub-text {
+    font-family: 'UTMSwiss';
+    text-align: right;
+    color: white;
+    font-size: 1.5rem;
+}
