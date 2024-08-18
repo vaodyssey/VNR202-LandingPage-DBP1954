@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
-import tank from '../../dist/tank.png'
 import bg from '../assets/images/img12.jpg'
+import tank from '../assets/images/tank2.png'
 import '../styles/footer.css'
 import '../styles/styles.css'
 export default function Footer() {
