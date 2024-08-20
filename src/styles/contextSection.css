@@ -1,0 +1,68 @@
+#context-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 42%;
+    height: 60%;
+    width: 90%;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+#context-grid {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+}
+
+#context-grid-item {
+    position: relative;
+}
+
+#context-card-container {
+    height: 100%;
+    cursor: default;
+}
+
+.context-card-sub-container {
+    position: absolute;
+    margin: 0 auto;
+
+}
+
+#context-card-img-1 {
+    position: absolute;
+    border-radius: 15px;
+    width: 90%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#context-card-img-2 {
+    position: absolute;
+    border-radius: 15px;
+    width: 90%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    filter: brightness(30%);
+    transition: 0.3s
+}
+
+#context-card-text {
+    position: absolute;
+    font-family: 'Vintage';
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}

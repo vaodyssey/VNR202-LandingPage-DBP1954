@@ -1,9 +1,9 @@
 import imgSrc from '../assets/images/img1.webp'
 import '../styles/styles.css'
-export default function Section1() {
+export default function Opening() {
 
     return (
-        <div className='container' id='section1'>
+        <div className='container' id='Opening'>
             <img src={imgSrc} className='img1' />
             <div className='headline-1'>
                 <div className='sub-text' >Chiến dịch </div>

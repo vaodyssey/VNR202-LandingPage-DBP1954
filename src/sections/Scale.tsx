@@ -1,9 +1,9 @@
 import img22 from '../assets/images/img22.webp'
 import '../styles/finalize.css'
 import '../styles/styles.css'
-export default function Section5() {
+export default function Scale() {
     return (
-        <div className='container' id='section5'>
+        <div className='container' id='Scale'>
             <img src={img22} className='img3' />
             <div className='headline-1'>
                 <div className='main-text-1'>Tầm vóc</div>

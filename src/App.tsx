@@ -1,4 +1,6 @@
+
 import { useEffect } from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-coverflow';
@@ -10,14 +12,15 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/thumbs';
 import './App.css';
+import Advancement from './sections/Advancement';
 import AppBarSection from './sections/AppBarSection';
+import Context from './sections/Context';
+import Documentaries from './sections/Documentaries';
 import Footer from './sections/Footer';
-import Section1 from './sections/Section1';
-import Section2 from './sections/Section2';
-import Section3 from './sections/Section3';
-import Section4 from './sections/Section4';
-import Section5 from './sections/Section5';
-import Section6 from './sections/Section6';
+import Logistics from './sections/Logistics';
+import Opening from './sections/Opening';
+import Scale from './sections/Scale';
+import Strategy from './sections/Strategy';
 
 function App() {
   useEffect(() => {
@@ -48,16 +51,17 @@ function App() {
     document.body.appendChild(script);
   }
   return (
-    <div>
+    <ParallaxProvider>
       <AppBarSection />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
+      <Opening />
+      <Context />
+      <Strategy />
+      <Logistics />
+      <Advancement />
+      <Scale />
+      <Documentaries />
       <Footer />
-    </div>
+    </ParallaxProvider>
   )
 }
 

@@ -1,6 +1,7 @@
 import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
 import ColorizeIcon from '@mui/icons-material/Colorize';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import Star from '@mui/icons-material/Star';
 import { Box } from "@mui/material";
 
@@ -23,32 +24,37 @@ const DrawerItems: DrawerItem[] = [
     {
         name: 'Giới thiệu',
         icon: (<Star />),
-        destination: 'section1'
+        destination: 'Opening'
+    },
+    {
+        name: 'Bối cảnh',
+        icon: (<QuestionMarkIcon />),
+        destination: 'Context'
     },
     {
         name: 'Chiến lược',
         icon: (<LightbulbIcon />),
-        destination: 'section2'
+        destination: 'Strategy'
     },
     {
         name: 'Hậu cần',
         icon: (<AirportShuttleIcon />),
-        destination: 'section3'
+        destination: 'Logistics'
     },
     {
         name: 'Tiến công',
         icon: (<ColorizeIcon />),
-        destination: 'section4'
+        destination: 'Advancement'
     },
     {
         name: 'Tầm vóc',
         icon: (<Visibility />),
-        destination: 'section5'
+        destination: 'Scale'
     },
     {
         name: 'Tư liệu',
         icon: (<DocumentScanner />),
-        destination: 'section6'
+        destination: 'Documentaries'
     }
 ]
 const goToSection = (destination: string) => {
