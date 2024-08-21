@@ -52,9 +52,9 @@ const DrawerItems: DrawerItem[] = [
         destination: 'Advancement'
     },
     {
-        name: 'Tầm vóc',
+        name: 'Kết quả',
         icon: (<Visibility />),
-        destination: 'Scale'
+        destination: 'Result'
     },
     {
         name: 'Tư liệu',

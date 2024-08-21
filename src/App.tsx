@@ -1,6 +1,5 @@
 
 import { useEffect } from 'react';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-coverflow';
@@ -20,7 +19,7 @@ import Evolution from './sections/Evolution';
 import Footer from './sections/Footer';
 import Logistics from './sections/Logistics';
 import Opening from './sections/Opening';
-import Scale from './sections/Scale';
+import Result from './sections/Result';
 import Strategy from './sections/Strategy';
 
 function App() {
@@ -52,7 +51,7 @@ function App() {
     document.body.appendChild(script);
   }
   return (
-    <ParallaxProvider>
+    <div>
       <AppBarSection />
       <Opening />
       <Context />
@@ -60,10 +59,10 @@ function App() {
       <Strategy />
       <Logistics />
       <Evolution />
-      <Scale />
+      <Result />
       <Documentaries />
       <Footer />
-    </ParallaxProvider>
+    </div>
   )
 }
 

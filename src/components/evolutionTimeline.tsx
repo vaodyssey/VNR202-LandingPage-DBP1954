@@ -56,16 +56,16 @@ function TimelineContentStyle({ content, count }: TimelineContentProps) {
             <TimelineContent
                 sx={
                     defaultStyle ?
-                        { py: '12px', px: 2, display: 'flex', alignItems: 'center', justifyContent: count % 2 ? 'right' : 'left' } :
+                        { py: '12px', px: 2, display: 'flex', alignItems: 'center' } :
                         { py: '12px', px: 2, backgroundColor: 'white', borderRadius: '1rem', zIndex: '1' }
                 } onMouseOver={handleMouseHover} onMouseLeave={handleMouseLeave}>
-                <Typography sx={{ fontFamily: 'Vintage', cursor: 'default', textAlign: 'right' }} variant="h5" component="span">
+                <Typography sx={{ fontFamily: 'Vintage', cursor: 'default', textAlign: 'left' }} variant="h5" component="span">
                     {content.title}
                 </Typography>
                 {defaultStyle ? <div></div> :
                     <Typography sx={{ fontFamily: 'UTMSwiss', marginTop: '1rem' }} variant='h6'>{content.content}</Typography>
                 }
             </TimelineContent>
-        </TimelineItem>
+        </TimelineItem >
     )
 }

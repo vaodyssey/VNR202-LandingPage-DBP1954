@@ -1,0 +1,94 @@
+#difficulties-parallax-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    width: 100%;
+    height: 60%;
+    margin: 0 auto;
+
+}
+
+#difficulties-parallax {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollText {
+    font-size: 1.5rem;
+}
+
+/* .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    height: 10rem;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+} */
+#sticky-card {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+#sticky-card-img {
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#parallax-card {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    margin-right: 5%;
+}
+
+#parallax-card-text {
+    position: absolute;
+    font-family: 'UTMSwiss';
+    color: white;
+    width: 100%;
+    font-size: 3.2rem;
+    text-align: left;
+}
+
+#card-img .parallax {
+    margin-right: 10%;
+}
+
+.sticky {
+    margin-left: 10%;
+    background-color: #ff6d6d;
+}
+
+.blue {
+    background-color: #5b65ad;
+    color: white;
+}
+
+.purple {
+    background-color: #9d65d0;
+}
+
+@media (max-width: 750px) {
+    .card {
+        width: 40%;
+    }
+
+    .parallax {
+        margin-right: 1.5rem;
+    }
+
+    .sticky {
+        margin-left: 1.5rem;
+    }
+}

@@ -1,4 +1,4 @@
-#advancement-container {
+#result-container {
     position: absolute;
     left: 0;
     right: 0;
@@ -8,34 +8,33 @@
     margin: 0 auto;
 }
 
-#advancement-container .swiper .swiper-button-prev {
+#result-container .swiper .swiper-button-prev {
     color: white;
     margin-left: 20px;
 }
 
-#advancement-container .swiper .swiper-button-next {
+#result-container .swiper .swiper-button-next {
     color: white;
     margin-right: 20px;
 }
 
-#advancement-swiper-container {
+#result-swiper-container {
     height: 100%;
-
 }
 
-#advancement-card-container {
+#result-card-container {
     position: absolute;
     width: 100%;
     height: auto;
 }
 
-#advancement-card-image {
+#result-card-image {
     width: 100%;
     border-radius: 10px;
     height: 45rem;
 }
 
-#advancement-card-content {
+#result-card-content {
     font-family: 'UTMSwiss';
     text-align: left;
     font-size: 30px;
@@ -43,7 +42,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 25%;
+    top: 20%;
     width: 85%;
     margin: 0 auto;
     color: white;
@@ -51,7 +50,7 @@
 }
 
 
-#advancement-card-count {
+#result-card-count {
     font-family: 'Vintage';
     text-align: left;
     font-size: 50px;
@@ -59,7 +58,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 15%;
+    top: 10%;
     width: 85%;
     margin: 0 auto;
     color: white;
