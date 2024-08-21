@@ -4,12 +4,11 @@ import { ContextContent, ContextContents } from '../content/context';
 import '../styles/ContextSection.css';
 import ContextModal from './contextModal';
 export default function ContextSection() {
-    let count = 0;
+
     return (
         <div id='context-container'>
             <Grid container spacing={0} id='context-grid'>
                 {ContextContents.map((content) => {
-                    count++
                     return (
                         <Grid item lg={3} id='context-grid-item'>
                             <ContextCard contextContent={content} />
