@@ -63,7 +63,7 @@ const DrawerItems: DrawerItem[] = [
     }
 ]
 const goToSection = (destination: string) => {
-    (document as any).getElementById(destination).scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(destination)?.scrollIntoView({ behavior: 'smooth' });
 }
 export const DrawerList = (
     <Box sx={{ width: 250, backgroundColor: DARKER_BLACK, height: '100%' }} role="presentation" >
