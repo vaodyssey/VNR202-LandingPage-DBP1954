@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material';
 import { useState } from 'react';
 import { ContextContent, ContextContents } from '../content/context';
-import '../styles/ContextSection.css';
+import '../styles/contextSection.css';
 import ContextModal from './contextModal';
 export default function ContextSection() {
 
