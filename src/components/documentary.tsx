@@ -35,7 +35,7 @@ function DocumentaryCard1({ documentaryContent }: DocumentaryCardProps) {
         window.open(documentaryContent.url)
     }
     return (
-        <Card sx={{ maxWidth: '100%', height: '100%', backgroundColor: DARKER_BLACK }}>
+        <Card sx={{ maxWidth: '100%', height: '100%', backgroundColor: 'white' }}>
             <CardActionArea onClick={openUrl} disableTouchRipple>
                 <CardMedia
                     component="img"
@@ -45,10 +45,10 @@ function DocumentaryCard1({ documentaryContent }: DocumentaryCardProps) {
                 <CardContent sx={{ opacity: '100%', marginTop: '5%' }}>
                     <Typography gutterBottom fontFamily='Vintage'
                         variant='h4'
-                        component="div" color='white' textAlign='left'>
+                        component="div" color={DARKER_BLACK} textAlign='left'>
                         {documentaryContent.name}
                     </Typography>
-                    <Typography variant="h5" color="white" textAlign='left' fontFamily='UTMSwiss'
+                    <Typography variant="h5" color={DARKER_BLACK} textAlign='left' fontFamily='UTMSwiss'
                         height='100%' lineHeight='3rem'>
                         {documentaryContent.description}
                     </Typography>
@@ -63,7 +63,7 @@ function DocumentaryCard2({ documentaryContent }: DocumentaryCardProps) {
         window.open(documentaryContent.url)
     }
     return (
-        <Card sx={{ maxWidth: '100%', height: '100%', backgroundColor: DARKER_BLACK }}>
+        <Card sx={{ maxWidth: '100%', height: '100%', backgroundColor: 'white' }}>
             <CardActionArea onClick={openUrl} disableTouchRipple>
                 <CardMedia
                     component="img"
@@ -74,7 +74,7 @@ function DocumentaryCard2({ documentaryContent }: DocumentaryCardProps) {
                 <CardContent>
                     <Typography gutterBottom fontFamily='Vintage'
                         variant='h6'
-                        component="div" color='white' textAlign='left'>
+                        component="div" color={DARKER_BLACK} textAlign='left'>
                         {documentaryContent.name}
                     </Typography>
                 </CardContent>

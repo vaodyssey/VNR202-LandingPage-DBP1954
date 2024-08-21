@@ -1,4 +1,4 @@
-import imgSrc from '../assets/images/img1.webp'
+import imgSrc from '../assets/images/img39.jpg'
 import DifficultiesParallax from '../components/difficultiesParallax'
 import '../styles/styles.css'
 export default function Difficulties() {

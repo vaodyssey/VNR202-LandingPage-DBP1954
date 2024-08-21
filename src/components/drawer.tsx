@@ -1,6 +1,7 @@
 import { DocumentScanner, Visibility } from '@mui/icons-material';
 import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
 import ColorizeIcon from '@mui/icons-material/Colorize';
+import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import SpeedIcon from '@mui/icons-material/Speed';
@@ -55,6 +56,11 @@ const DrawerItems: DrawerItem[] = [
         name: 'Kết quả',
         icon: (<Visibility />),
         destination: 'Result'
+    },
+    {
+        name: 'Anh hùng',
+        icon: (<HealthAndSafetyIcon />),
+        destination: 'Heroes'
     },
     {
         name: 'Tư liệu',

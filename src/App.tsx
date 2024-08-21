@@ -22,6 +22,7 @@ import Logistics from './sections/Logistics';
 import Opening from './sections/Opening';
 import Result from './sections/Result';
 import Strategy from './sections/Strategy';
+import Heroes from './sections/Heroes';
 
 function App() {
   useEffect(() => {
@@ -61,6 +62,7 @@ function App() {
       <Logistics />
       <Evolution />
       <Result />
+      <Heroes/>
       <Documentaries />
       <Footer />
     </ParallaxProvider>

@@ -2,24 +2,25 @@
 import { animated, config, useSpring } from '@react-spring/web';
 import { useEffect, useState } from 'react';
 import { InView, useInView } from 'react-intersection-observer';
-import { DifficultyContents } from '../content/difficulties';
-import '../styles/difficultiesParallax.css';
-export default function DifficultiesParallax() {
-    const [image, setImage] = useState<string>(DifficultyContents[0].image);
+
+import { HeroContent, HeroContents } from '../content/heroes';
+import '../styles/heroesParallax.css';
+export default function HeroesParallax() {
+    const [image, setImage] = useState<string>(HeroContents[0].image);
     const changeImage = (index: number) => {
-        const img = DifficultyContents[index].image;
+        const img = HeroContents[index].image;
         setImage(img)
     }
     return (
-        <div id='difficulties-parallax-container'>
-            <div id='sticky-section'>
+        <div id='heroes-parallax-container'>
+            <div id='heroes-sticky-section'>
                 <StickyCard image={image} key={image} />
             </div>
-            <div id='parallax-section'>
+            <div id='heroes-parallax-section'>
                 <InView>
-                    {DifficultyContents.map((content, index) => {
+                    {HeroContents.map((content, index) => {
                         return (
-                            <ParallaxCard content={content.content} index={index} changeImage={changeImage} />
+                            <ParallaxCard content={content} index={index} changeImage={changeImage} />
                         )
                     })}
                 </InView>
@@ -41,20 +42,19 @@ function StickyCard({ image }: StickyCardProps) {
         delay: 100
     });
     return (
-        <animated.div style={styles} id='sticky-card-img-wrapper'>
-            <img src={image} id='sticky-card-img' />
+        <animated.div style={styles} id='heroes-sticky-card-img-wrapper'>
+            <img src={image} id='heroes-sticky-card-img' />
         </animated.div>
     )
 
 }
 type ParallaxCardProps = {
-    content: string,
+    content: HeroContent,
     index: number,
     changeImage: (cardIndex: number) => void;
 }
 function ParallaxCard({ content, index, changeImage }: ParallaxCardProps) {
     const handleEnter = (index: number) => {
-        console.log(`Div ${index} entered the viewport`);
         changeImage(index)
     };
 
@@ -70,9 +70,10 @@ function ParallaxCard({ content, index, changeImage }: ParallaxCardProps) {
     }, [inView]);
 
     return (
-        <div id='parallax-card-text-container' key={index}
+        <div id='heroes-parallax-card-text-container' key={index}
             ref={ref} >
-            <p id='parallax-card-text'>{content}</p>
+            <div id='heroes-parallax-card-title'>{content.title}</div>
+            <p id='heroes-parallax-card-text'>{content.content}</p>
         </div >
 
     )

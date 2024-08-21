@@ -7,10 +7,9 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
-import { DARK_BLACK } from '../constants/colors';
+import { DARK_BLACK, DARKER_BLACK } from '../constants/colors';
 import { EvolutionContent, EvolutionContents } from '../content/evolution';
 import '../styles/evolutionTimeline.css';
-
 export default function EvolutionTimeline() {
     let count = -1;
     return (
@@ -55,15 +54,21 @@ function TimelineContentStyle({ content, count }: TimelineContentProps) {
             </TimelineSeparator>
             <TimelineContent
                 sx={
-                    defaultStyle ?
-                        { py: '12px', px: 2, display: 'flex', alignItems: 'center' } :
-                        { py: '12px', px: 2, backgroundColor: 'white', borderRadius: '1rem', zIndex: '1' }
-                } onMouseOver={handleMouseHover} onMouseLeave={handleMouseLeave}>
-                <Typography sx={{ fontFamily: 'Vintage', cursor: 'default', textAlign: 'left' }} variant="h5" component="span">
+                    defaultStyle
+                        ? { py: '12px', px: 2, display: 'flex', alignItems: 'center' }
+                        : { py: '12px', px: 2, backgroundColor: DARKER_BLACK, borderRadius: '1rem', zIndex: '1', transition: 'opacity' }
+                }
+                onMouseOver={handleMouseHover} onMouseLeave={handleMouseLeave}>
+                <Typography sx={{
+                    fontFamily: 'Vintage', cursor: 'default', textAlign: count % 2 == 0 ? 'left' : 'right', width: '100%',
+                    color: defaultStyle ? DARKER_BLACK : 'white'
+                }}
+                    variant="h5" component="span">
                     {content.title}
                 </Typography>
                 {defaultStyle ? <div></div> :
-                    <Typography sx={{ fontFamily: 'UTMSwiss', marginTop: '1rem' }} variant='h6'>{content.content}</Typography>
+                    <Typography sx={{ fontFamily: 'UTMSwiss', marginTop: '1rem', cursor: 'default', color: 'white' }}
+                        variant='h6'>{content.content}</Typography>
                 }
             </TimelineContent>
         </TimelineItem >
