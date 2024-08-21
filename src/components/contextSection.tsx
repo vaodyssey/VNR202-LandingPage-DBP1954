@@ -37,7 +37,7 @@ function ContextCard({ contextContent }: ContextCardProps) {
     }
 
     return (
-        <div >
+        <div id='context-card-wrapper' >
 
             {defaultStyle ?
                 <div id='context-card-container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

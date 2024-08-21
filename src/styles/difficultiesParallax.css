@@ -1,12 +1,12 @@
 #difficulties-parallax-container {
     position: absolute;
+    display: flex;
     left: 0;
     right: 0;
     top: 35%;
     width: 100%;
-    height: 60%;
+    height: 50%;
     margin: 0 auto;
-
 }
 
 #difficulties-parallax {
@@ -14,26 +14,44 @@
     scrollbar-width: none;
 }
 
-.scrollText {
-    font-size: 1.5rem;
+#difficulties-parallax-item {
+    height: 100%;
 }
 
-/* .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.25rem;
-    height: 10rem;
-    width: 30%;
-    text-align: center;
-    border-radius: 10px;
-} */
-#sticky-card {
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+#sticky-section {
     position: relative;
-    width: 50%;
+    width: 45%;
     height: 100%;
     margin-left: 5%;
+
 }
+
+.image-fade-in {
+    opacity: 0;
+    transform: translateX(-20px);
+    /* Optional: add a slight slide effect */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.image-fade-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Reset the transform when visible */
+}
+
+
+
 
 #sticky-card-img {
     position: absolute;
@@ -43,52 +61,34 @@
     top: 0;
     bottom: 0;
     width: 100%;
+    height: 100%;
+
 }
 
-#parallax-card {
+
+#parallax-section {
     position: relative;
-    width: 35%;
+    width: 40%;
     height: 100%;
-    margin-right: 5%;
+    margin-left: 5%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#parallax-card-text-container {
+    position: relative;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    margin-top: 19.5%;
+    margin-bottom: 19.5%;
 }
 
 #parallax-card-text {
-    position: absolute;
+
     font-family: 'UTMSwiss';
     color: white;
-    width: 100%;
     font-size: 3.2rem;
     text-align: left;
-}
-
-#card-img .parallax {
-    margin-right: 10%;
-}
-
-.sticky {
-    margin-left: 10%;
-    background-color: #ff6d6d;
-}
-
-.blue {
-    background-color: #5b65ad;
-    color: white;
-}
-
-.purple {
-    background-color: #9d65d0;
-}
-
-@media (max-width: 750px) {
-    .card {
-        width: 40%;
-    }
-
-    .parallax {
-        margin-right: 1.5rem;
-    }
-
-    .sticky {
-        margin-left: 1.5rem;
-    }
 }

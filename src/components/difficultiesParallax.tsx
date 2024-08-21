@@ -1,48 +1,29 @@
-import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { useEffect, useRef, useState } from 'react'
-import { DifficultyContents } from '../content/difficulties'
-import '../styles/difficultiesParallax.css'
+
+import { useEffect, useState } from 'react';
+import { InView, useInView } from 'react-intersection-observer';
+import { DifficultyContents } from '../content/difficulties';
+import '../styles/difficultiesParallax.css';
 export default function DifficultiesParallax() {
-    const alignCenter = { display: 'flex', alignItems: 'center' }
-    const parallaxRef = useRef<IParallax>(null)
-    const [currentImage, setCurrentImage] = useState<string>(DifficultyContents[0].image);
-    const listLength = DifficultyContents.length
-    let offset = -1;
-    let offsetDifference = 1;
-
-
-
-    const scrollListener = () => {
-        const container = parallaxRef.current?.container
-            .current as HTMLDivElement
-
-        container.onscroll = () => {
-            console.log('Current index:', parallaxRef.current?.content)
-        }
-        return () => {
-            container.onscroll = null
-        }
-    };
-    useEffect(scrollListener, []);
+    const [image, setImage] = useState<string>(DifficultyContents[0].image);
+    const changeImage = (index: number) => {
+        const img = DifficultyContents[index].image;
+        setImage(img)
+    }
     return (
         <div id='difficulties-parallax-container'>
-            <Parallax pages={listLength} id='difficulties-parallax' ref={parallaxRef}>
-                <ParallaxLayer sticky={{ start: 0, end: listLength - 1 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
-                    {/* <div className='card sticky'>
-                        <p>I'm a sticky layer</p>
-                    </div> */}
-                    <StickyCard image={currentImage} />
-                </ParallaxLayer>
-                {DifficultyContents.map((content) => {
-                    offset += offsetDifference
-                    return (
-                        <ParallaxLayer offset={offset} speed={0.1} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
-                            <ParallaxCard content={content.content} />
-                        </ParallaxLayer>
+            <div id='sticky-section'>
+                <StickyCard image={image} />
+            </div>
+            <div id='parallax-section'>
+                <InView>
+                    {DifficultyContents.map((content, index) => {
+                        return (
+                            <ParallaxCard content={content.content} index={index} changeImage={changeImage} />
+                        )
+                    })}
+                </InView>
 
-                    )
-                })}
-            </Parallax>
+            </div>
         </div>
     )
 }
@@ -51,19 +32,44 @@ type StickyCardProps = {
     image: string
 }
 function StickyCard({ image }: StickyCardProps) {
+    const [visible, setVisible] = useState(false);
+    useEffect(() => {
+        setTimeout(() => {
+            setVisible(true); // Trigger the fade-in after 1 second
+        }, 1000);
+    })
     return (
-        <div id='sticky-card'>
-            <img src={image} id='sticky-card-img' />
-        </div>)
+        <img src={image} id='sticky-card-img' className={`image-fade-in ${visible ? 'visible' : ''}`} />
+    )
+
 }
 type ParallaxCardProps = {
-    content: string
+    content: string,
+    index: number,
+    changeImage: (cardIndex: number) => void;
 }
-function ParallaxCard({ content }: ParallaxCardProps) {
-    return (
-        <div id='parallax-card'>
-            <p id='parallax-card-text'>{content}</p>
+function ParallaxCard({ content, index, changeImage }: ParallaxCardProps) {
+    const handleEnter = (index: number) => {
+        console.log(`Div ${index} entered the viewport`);
+        changeImage(index)
+    };
 
-        </div>
+    const { ref, inView, entry } = useInView({
+        triggerOnce: false, // To keep observing
+        threshold: 0.5, // Adjust this threshold as needed
+    });
+
+    useEffect(() => {
+        if (inView) {
+            handleEnter(index); // Pass index + 1 for better readability
+        }
+    }, [inView]);
+
+    return (
+        <div id='parallax-card-text-container' key={index}
+            ref={ref} >
+            <p id='parallax-card-text'>{content}</p>
+        </div >
+
     )
 }
