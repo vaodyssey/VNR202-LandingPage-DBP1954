@@ -12,10 +12,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/thumbs';
 import './App.css';
-import Advancement from './sections/Advancement';
 import AppBarSection from './sections/AppBarSection';
 import Context from './sections/Context';
+import Difficulties from './sections/Difficulties';
 import Documentaries from './sections/Documentaries';
+import Evolution from './sections/Evolution';
 import Footer from './sections/Footer';
 import Logistics from './sections/Logistics';
 import Opening from './sections/Opening';
@@ -55,9 +56,10 @@ function App() {
       <AppBarSection />
       <Opening />
       <Context />
+      <Difficulties />
       <Strategy />
       <Logistics />
-      <Advancement />
+      <Evolution />
       <Scale />
       <Documentaries />
       <Footer />

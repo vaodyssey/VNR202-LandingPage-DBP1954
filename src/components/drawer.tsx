@@ -1,11 +1,11 @@
+import { DocumentScanner, Visibility } from '@mui/icons-material';
 import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
 import ColorizeIcon from '@mui/icons-material/Colorize';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import SpeedIcon from '@mui/icons-material/Speed';
 import Star from '@mui/icons-material/Star';
 import { Box } from "@mui/material";
-
-import { DocumentScanner, Visibility } from '@mui/icons-material';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -32,6 +32,11 @@ const DrawerItems: DrawerItem[] = [
         destination: 'Context'
     },
     {
+        name: 'Khó khăn',
+        icon: (<SpeedIcon />),
+        destination: 'Difficulties'
+    },
+    {
         name: 'Chiến lược',
         icon: (<LightbulbIcon />),
         destination: 'Strategy'
@@ -42,7 +47,7 @@ const DrawerItems: DrawerItem[] = [
         destination: 'Logistics'
     },
     {
-        name: 'Tiến công',
+        name: 'Diễn biến',
         icon: (<ColorizeIcon />),
         destination: 'Advancement'
     },

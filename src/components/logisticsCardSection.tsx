@@ -39,7 +39,7 @@ function LogisticsCard1({ logisticsContent, count }: LogisticsCardProps) {
         <Card sx={{ display: 'flex' }}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flex: '1 0 auto', alignItems: 'center', padding: '8%' }}>
-                    <div className='description-count'>{count}.</div>
+                    <div className='description-count'>{count}. {logisticsContent.title}</div>
                     <div id='logistics-card-description-1'>
                         {logisticsContent.content}
                     </div>
@@ -63,7 +63,7 @@ function LogisticsCard2({ logisticsContent, count }: LogisticsCardProps) {
             />
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flex: '1 0 auto', alignItems: 'center', padding: '8%' }}>
-                    <div className='description-count'>{count}.</div>
+                    <div className='description-count'>{count}. {logisticsContent.title}</div>
                     <div id='logistics-card-description-1'>
                         {logisticsContent.content}
                     </div>
