@@ -58,7 +58,7 @@ function ParallaxCard({ content, index, changeImage }: ParallaxCardProps) {
         changeImage(index)
     };
 
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         triggerOnce: false, // To keep observing
         threshold: 0.5, // Adjust this threshold as needed
     });
