@@ -42,6 +42,7 @@ function RightSection() {
                 <div>Môn học: VNR202 (Summer 2024)</div>
                 <div>Giảng viên: Nguyễn Văn Bình</div>
                 <div>Đại học FPT, Hồ Chí Minh </div>
+                <div>Liên hệ: 0869366489 (Việt Anh) </div>
             </Grid>
         </Grid>
     </div>)

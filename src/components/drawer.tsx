@@ -72,12 +72,15 @@ const goToSection = (destination: string) => {
     document.getElementById(destination)?.scrollIntoView({ behavior: 'smooth' });
 }
 export const DrawerList = (
-    <Box sx={{ width: 250, backgroundColor: DARKER_BLACK, height: '100%' }} role="presentation" >
+    <Box sx={{
+        width: 250, backgroundColor: DARKER_BLACK, height: '100%', overflow: 'auto',
+        msOverflowStyle: 'none', scrollbarWidth: 'none'
+    }} role="presentation" >
         <div id='drawer-title'>
             Mục lục
         </div>
 
-        <List >
+        <List>
             {DrawerItems.map((item, index) => (
                 <ListItem key={index} disablePadding onClick={() => goToSection(item.destination)}
                     sx={{ marginTop: '0.5rem' }}>
